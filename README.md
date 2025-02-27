@@ -150,8 +150,8 @@ Exemple pour créer un utilisateur via Postman :
 - Body (raw, JSON) :
 
             {
-      "passWord": "monMotDePasse",
-      "fullName": "John Doe",
-      "email": "john@example.com"
+              "passWord": "monMotDePasse",
+              "fullName": "John Doe",
+              "email": "john@example.com"
             }
 
