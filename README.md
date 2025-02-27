@@ -143,9 +143,9 @@ Exemple pour créer un utilisateur via Postman :
     Content-Type: application/json
 - Body (raw, JSON) :
 
-    `{
+            {
       "passWord": "monMotDePasse",
       "fullName": "John Doe",
       "email": "john@example.com"
-    }`
+            }
 
