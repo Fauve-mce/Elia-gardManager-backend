@@ -15,6 +15,8 @@
 ### ✅ Tests et vérifications
 
 
+
+
 #### ✨ Fonctionnalités principales
 
 - Authentification utilisateur (login/logout via sessions)
@@ -33,14 +35,16 @@
 
 Étapes d’installation
 
-# 1. Cloner ce dépôt Git
+### 1. Cloner ce dépôt Git
         git clone https://github.com/<votre-compte>/nom-du-projet.git
 
-# 2. Aller dans le dossier du projet
+### 2. Aller dans le dossier du projet
         cd nom-du-projet        
 
-# 3. Installer les dépendances
+### 3. Installer les dépendances
         npm install
+
+
 
 #### 📂 Structure du projet
 
@@ -69,6 +73,8 @@
 └── server.js                    # Point d'entrée principal (Express)
 ```
 
+
+
 #### ⚙️ Configuration de l'environnement
 
 Créez un fichier .env à la racine du projet (au même niveau que package.json et server.js) et ajoutez-y :
@@ -96,6 +102,8 @@ Vous devriez voir dans la console :
 
         🐍 Serveur en ligne sur le port 8000
         ✅ Connecté à MongoDB avec succès !
+
+
 
 #### 🛠 Utilisation et endpoints
 
@@ -131,6 +139,8 @@ Une fois le serveur lancé, vous pouvez tester les routes depuis un outil tel qu
 - GET /switch/:id : Récupérer le “solde” (balance) de jours d’un utilisateur
 - PUT /switch/:id : Mettre à jour le state d’un switch (par son ID)
 - DELETE /switch/:id : Supprimer un switch (par son ID)
+
+
 
 #### ✅ Tests et vérifications
 
