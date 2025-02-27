@@ -1,12 +1,12 @@
 🚩 Sommaire
 
-✨ Fonctionnalités principales
-🔧 Prérequis et installation
-📂 Structure du projet
-⚙️ Configuration de l'environnement
-▶️ Lancement de l'application
-🛠 Utilisation et endpoints
-✅ Tests et vérifications
+#✨ Fonctionnalités principales
+#🔧 Prérequis et installation
+#📂 Structure du projet
+#⚙️ Configuration de l'environnement
+#▶️ Lancement de l'application
+#🛠 Utilisation et endpoints
+#✅ Tests et vérifications
 
 
 ✨ Fonctionnalités principales
