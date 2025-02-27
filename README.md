@@ -15,7 +15,7 @@
 ### ✅ Tests et vérifications
 
 
-✨ Fonctionnalités principales
+#### ✨ Fonctionnalités principales
 
 - Authentification utilisateur (login/logout via sessions)
 - CRUD (Create, Read, Update, Delete) sur :
@@ -42,7 +42,7 @@
 # 3. Installer les dépendances
         npm install
 
-📂 Structure du projet
+#### 📂 Structure du projet
 
 ```
 ├── backend
@@ -69,7 +69,7 @@
 └── server.js                    # Point d'entrée principal (Express)
 ```
 
-⚙️ Configuration de l'environnement
+#### ⚙️ Configuration de l'environnement
 
 Créez un fichier .env à la racine du projet (au même niveau que package.json et server.js) et ajoutez-y :
 
@@ -81,7 +81,7 @@ Créez un fichier .env à la racine du projet (au même niveau que package.json 
 
 Note : Ne commitez pas ce fichier dans un dépôt public (assurez-vous qu’il est ignoré dans votre .gitignore).
 
-▶️ Lancement de l'application
+#### ▶️ Lancement de l'application
 
 Après avoir configuré votre .env, vous pouvez lancer le serveur Express en utilisant :
 
@@ -97,7 +97,7 @@ Vous devriez voir dans la console :
         🐍 Serveur en ligne sur le port 8000
         ✅ Connecté à MongoDB avec succès !
 
-🛠 Utilisation et endpoints
+#### 🛠 Utilisation et endpoints
 
 Une fois le serveur lancé, vous pouvez tester les routes depuis un outil tel que Postman, Insomnia ou un simple client HTTP.
 1. Users (/user)
@@ -132,7 +132,7 @@ Une fois le serveur lancé, vous pouvez tester les routes depuis un outil tel qu
 - PUT /switch/:id : Mettre à jour le state d’un switch (par son ID)
 - DELETE /switch/:id : Supprimer un switch (par son ID)
 
-✅ Tests et vérifications
+#### ✅ Tests et vérifications
 
 Pour tester les routes :
 
