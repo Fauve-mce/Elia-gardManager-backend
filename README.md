@@ -28,13 +28,13 @@
 Étapes d’installation
 
 # 1. Cloner ce dépôt Git
-```git clone https://github.com/<votre-compte>/nom-du-projet.git```
+        git clone https://github.com/<votre-compte>/nom-du-projet.git
 
 # 2. Aller dans le dossier du projet
-```cd nom-du-projet```
+        cd nom-du-projet        
 
 # 3. Installer les dépendances
-```npm install```
+        npm install
 
 📂 Structure du projet
 
@@ -67,8 +67,8 @@
 
 Créez un fichier .env à la racine du projet (au même niveau que package.json et server.js) et ajoutez-y :
 
-`MONGO_URI=mongodb://<votre-URI-MongoDB>
-SESSION_SECRET=<une-chaîne-de-caractères-secrète>`
+        MONGO_URI=mongodb://<votre-URI-MongoDB>
+        SESSION_SECRET=<une-chaîne-de-caractères-secrète>
 
 - MONGO_URI : L’URL de connexion à votre base de données MongoDB
 - SESSION_SECRET : Une clé secrète pour chiffrer les sessions (utilisée par express-session)
@@ -79,17 +79,17 @@ Note : Ne commitez pas ce fichier dans un dépôt public (assurez-vous qu’il e
 
 Après avoir configuré votre .env, vous pouvez lancer le serveur Express en utilisant :
 
-```npm start```
+        npm start
 
 Ou en mode développement (si vous avez un script "dev" dans votre package.json, par exemple via nodemon) :
 
-```npm run dev```
+        npm run dev
 
 Par défaut, le serveur tourne sur le port 8000 (modifiable dans server.js).
 Vous devriez voir dans la console :
 
-`🐍 Serveur en ligne sur le port 8000
-✅ Connecté à MongoDB avec succès !`
+        🐍 Serveur en ligne sur le port 8000
+        ✅ Connecté à MongoDB avec succès !
 
 🛠 Utilisation et endpoints
 
