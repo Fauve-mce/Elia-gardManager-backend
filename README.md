@@ -1,167 +1,159 @@
-# 🚩 Sommaire
+# Elia-gardmanager - Backend 
 
-### ✨ Fonctionnalités principales
+## 📋 Project Overview
+Welcome to the Backend API for managing shifts and schedules!
+This backend handles user authentication, CRUD operations on users, schedules, statuses, and switches, and validates the user shifts based on specific date ranges.
 
-### 🔧 Prérequis et installation
+## 📱 Features
+User Authentication: Login/logout via sessions.
+CRUD operations:
+Users (User)
+Schedules (Schedule)
+Statuses (Status)
+Switches (Switch)
+Switch Validation: Modify assigned users for a schedule within a date range.
+Session Management: Uses express-session for storing sessions server-side.
 
-### 📂 Structure du projet
+## 📸 Project Preview
 
-### ⚙️ Configuration de l'environnement
-
-### ▶️ Lancement de l'application
-
-### 🛠 Utilisation et endpoints
-
-### ✅ Tests et vérifications
-
-
-
-
-#### ✨ Fonctionnalités principales
-
-- Authentification utilisateur (login/logout via sessions)
-- CRUD (Create, Read, Update, Delete) sur :
-        Les utilisateurs (User)
-        Les plannings (Schedule)
-        Les statuts (Status)
-        Les switches (Switch)
-- Validation des switches : Possibilité de modifier les utilisateurs assignés sur des créneaux dans une plage de dates donnée
-- Gestion de la session avec express-session (enregistrée côté serveur)
-
-🔧 Prérequis et installation
-
-    Node.js (version 14 ou supérieure recommandée)
-    npm ou yarn (pour installer les dépendances)
-
-Étapes d’installation
-
-### 1. Cloner ce dépôt Git
-        git clone https://github.com/<votre-compte>/nom-du-projet.git
-
-### 2. Aller dans le dossier du projet
-        cd nom-du-projet        
-
-### 3. Installer les dépendances
-        npm install
-
-
-
-#### 📂 Structure du projet
-
-```
+## 📂 Project Structure
+php
+Copier
 ├── backend
 │   ├── config
-│   │   └── connection.js        # Connexion MongoDB
-│   ├── controllers              # Contrôleurs
+│   │   └── connection.js        # MongoDB connection
+│   ├── controllers              # Controllers for CRUD operations
 │   │   ├── schedule.controller.js
 │   │   ├── status.controller.js
 │   │   ├── switch.controller.js
 │   │   └── user.controller.js
-│   ├── models                   # Modèles Mongoose
+│   ├── models                   # Mongoose models
 │   │   ├── schedule.js
 │   │   ├── status.js
 │   │   ├── switch.js
 │   │   └── user.js
-│   ├── routes                   # Définition des routes
+│   ├── routes                   # API routes
 │   │   ├── schedule.routes.js
 │   │   ├── status.routes.js
 │   │   ├── switch.routes.js
 │   │   └── user.routes.js
 │   └── ...
-├── .env                         # Fichier d'environnement (à créer)
+├── .env                         # Environment configuration file (to be created)
 ├── package.json
-└── server.js                    # Point d'entrée principal (Express)
+└── server.js                    # Express entry point
+
+## 🚀 Technologies Used
+Node.js for the server runtime.
+Express.js for API routing.
+MongoDB for data storage.
+Mongoose for MongoDB object modeling.
+express-session for managing user sessions.
+
+## 🔧 Prerequisites and Installation
+
+**Prerequisites**
+Node.js (version 14 or higher recommended)
+npm or yarn (for dependency management)
+
+**Installation Steps**
+Clone the repository
+```bash
+git clone https://github.com/<your-account>/Elia-gardManager.git
+cd Elia-gardManager
+```
+Install dependencies
+```bash
+npm install
 ```
 
+## ⚙️ Environment Configuration
+Create a .env file at the root of the project (same level as package.json and server.js) and add the following:
 
+```env
+MONGO_URI=mongodb://<your-mongo-uri>
+SESSION_SECRET=<your-session-secret>
+```
+MONGO_URI: The URL to your MongoDB database.
+SESSION_SECRET: A secret key for encrypting sessions (used by express-session).
+Note: Do not commit the .env file to a public repository. Ensure it's added to your .gitignore.
 
-#### ⚙️ Configuration de l'environnement
+▶️ Launching the Application
+After configuring your .env file, you can start the server with:
 
-Créez un fichier .env à la racine du projet (au même niveau que package.json et server.js) et ajoutez-y :
+```bash
+npm start
+```
+Or for development mode (if you have a dev script, e.g., via nodemon):
 
-        MONGO_URI=mongodb://<votre-URI-MongoDB>
-        SESSION_SECRET=<une-chaîne-de-caractères-secrète>
+```bash
+npm run dev
+```
+By default, the server runs on port 8000 (configurable in server.js).
+You should see the following output in the console:
 
-- MONGO_URI : L’URL de connexion à votre base de données MongoDB
-- SESSION_SECRET : Une clé secrète pour chiffrer les sessions (utilisée par express-session)
+```bash
+🐍 Server is running on port 8000
+✅ Successfully connected to MongoDB!
+```
 
-Note : Ne commitez pas ce fichier dans un dépôt public (assurez-vous qu’il est ignoré dans votre .gitignore).
+## 🛠️ Usage and Endpoints
+Once the server is running, you can test the routes using an API client like Postman, Insomnia, or a simple HTTP client. Below are the available endpoints:
 
-#### ▶️ Lancement de l'application
-
-Après avoir configuré votre .env, vous pouvez lancer le serveur Express en utilisant :
-
-        npm start
-
-Ou en mode développement (si vous avez un script "dev" dans votre package.json, par exemple via nodemon) :
-
-        npm run dev
-
-Par défaut, le serveur tourne sur le port 8000 (modifiable dans server.js).
-Vous devriez voir dans la console :
-
-        🐍 Serveur en ligne sur le port 8000
-        ✅ Connecté à MongoDB avec succès !
-
-
-
-#### 🛠 Utilisation et endpoints
-
-Une fois le serveur lancé, vous pouvez tester les routes depuis un outil tel que Postman, Insomnia ou un simple client HTTP.
 1. Users (/user)
-
-- POST /user : Créer un nouvel utilisateur
-- POST /user/login : Connecter un utilisateur
-- GET /user/logout : Déconnecter un utilisateur (supprime la session)
-- GET /user/me : Récupérer l’utilisateur actuellement connecté (via la session)
-- GET /user : Récupérer la liste de tous les utilisateurs
-- PUT /user/:id : Mettre à jour un utilisateur (par son ID)
-- DELETE /user/:id : Supprimer un utilisateur (par son ID)
-
+POST /user: Create a new user
+POST /user/login: Log in a user
+GET /user/logout: Log out a user (removes session)
+GET /user/me: Get the currently logged-in user (via session)
+GET /user: Get a list of all users
+PUT /user/:id: Update a user (by ID)
+DELETE /user/:id: Delete a user (by ID)
 2. Schedules (/schedule)
+POST /schedule: Create a new schedule
+GET /schedule: Get all schedules
+PUT /schedule/:id: Update a schedule (by ID)
+PUT /schedule: Validate a switch and update affected schedules (route validateSwitch)
+DELETE /schedule/:id: Delete a schedule (by ID)
+3. Statuses (/status)
+POST /status: Create a new status
+GET /status: Get a list of all statuses
+PUT /status/:id: Update a status (by ID)
+4. Switches (/switch)
+POST /switch: Create a new switch
+GET /switch: Get a list of all switches
+GET /switch/:id: Get the “balance” of days for a user
+PUT /switch/:id: Update a switch state (by ID)
+DELETE /switch/:id: Delete a switch (by ID)
+✅ Tests and Verification
+To test the routes:
 
-- POST /schedule : Créer un nouveau planning
-- GET /schedule : Récupérer tous les plannings
-- PUT /schedule/:id : Mettre à jour un planning (par son ID)
-- PUT /schedule : Valider un switch et mettre à jour les plannings concernés (la route validateSwitch)
-- DELETE /schedule/:id : Supprimer un planning (par son ID)
+Install Postman (or another API client like Insomnia).
+Check the URL of your server (e.g., http://localhost:8000).
+Test each endpoint using the appropriate methods (POST, GET, PUT, DELETE).
+Pass the required data in req.body or req.params as per the documentation above.
+Example for creating a user via Postman:
 
-3. Status (/status)
+Method: POST
+URL: http://localhost:8000/user
+Headers:
+Content-Type: application/json
+Body (raw, JSON):
 
-- POST /status : Créer un nouveau statut
-- GET /status : Récupérer la liste de tous les statuts
-- PUT /status/:id : Mettre à jour un statut (par son ID)
+```json
+{
+  "passWord": "myPassword",
+  "fullName": "John Doe",
+  "email": "john@example.com"
+}
+```
 
-4. Switch (/switch)
+## 🔗 Frontend
+This project works with the Elia-gardManager-backend.
+Ensure that the frontend is running before launching the frontend.
 
-- POST /switch : Créer un nouveau switch
-- GET /switch : Récupérer la liste de tous les switches
-- GET /switch/:id : Récupérer le “solde” (balance) de jours d’un utilisateur
-- PUT /switch/:id : Mettre à jour le state d’un switch (par son ID)
-- DELETE /switch/:id : Supprimer un switch (par son ID)
+## 🔗 Frontend Repo: 
+[Elia GardManager Backend](https://github.com/Fauve-mce/elia-gardmanager-frontend)
 
-
-
-#### ✅ Tests et vérifications
-
-Pour tester les routes :
-
-- Installer Postman (ou Insomnia, ou un autre client API)
-- Vérifier l’URL de votre serveur (ex. http://localhost:8000)
-- Tester chaque endpoint en respectant les méthodes (POST, GET, PUT, DELETE)
-- Passer les données nécessaires dans req.body ou req.params selon la documentation ci-dessus
-
-Exemple pour créer un utilisateur via Postman :
-
-- Méthode : POST
-    URL : http://localhost:8000/user
-- Headers :
-    Content-Type: application/json
-- Body (raw, JSON) :
-
-            {
-              "passWord": "monMotDePasse",
-              "fullName": "John Doe",
-              "email": "john@example.com"
-            }
+## 🎥 Video Demo
+Check out the video demo here: 
+[Linkedin Post](https://www.linkedin.com/feed/update/urn:li:activity:7301037570862338049/)
 
