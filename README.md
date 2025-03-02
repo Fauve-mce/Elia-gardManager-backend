@@ -4,6 +4,8 @@
 Welcome to the Backend API for managing shifts and schedules!
 This backend handles user authentication, CRUD operations on users, schedules, statuses, and switches, and validates the user shifts based on specific date ranges.
 
+This is a group project developed by [Elyes0688](https://github.com/Elyes0688), [imadghali01](https://github.com/imadghali01), [jeffreydeville](https://github.com/jeffreydeville) and Fauve-mce.
+
 ## 📱 Features
 User Authentication: Login/logout via sessions.
 CRUD operations:
