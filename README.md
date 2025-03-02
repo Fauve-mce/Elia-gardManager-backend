@@ -1,4 +1,4 @@
-# Elia-gardmanager - Backend 
+# Elia-gardmanager (Backend) 
 
 ## 📋 Project Overview
 Welcome to the Backend API for managing shifts and schedules!
@@ -17,8 +17,7 @@ Session Management: Uses express-session for storing sessions server-side.
 ## 📸 Project Preview
 
 ## 📂 Project Structure
-php
-Copier
+```php
 ├── backend
 │   ├── config
 │   │   └── connection.js        # MongoDB connection
@@ -41,19 +40,20 @@ Copier
 ├── .env                         # Environment configuration file (to be created)
 ├── package.json
 └── server.js                    # Express entry point
+```
 
 ## 🚀 Technologies Used
-Node.js for the server runtime.
-Express.js for API routing.
-MongoDB for data storage.
-Mongoose for MongoDB object modeling.
-express-session for managing user sessions.
+- Node.js for the server runtime.
+- Express.js for API routing.
+- MongoDB for data storage.
+- Mongoose for MongoDB object modeling.
+- express-session for managing user sessions.
 
 ## 🔧 Prerequisites and Installation
 
 **Prerequisites**
-Node.js (version 14 or higher recommended)
-npm or yarn (for dependency management)
+- Node.js (version 14 or higher recommended)
+- npm or yarn (for dependency management)
 
 **Installation Steps**
 Clone the repository
