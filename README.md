@@ -162,7 +162,7 @@ Body (raw, JSON):
 
 ## 🔗 Frontend
 This project works with the Elia-gardManager-backend.
-Ensure that the frontend is running before launching the frontend.
+Ensure that the bacckend is running before launching the frontend.
 
 ## 🔗 Frontend Repo: 
 [Elia GardManager Backend](https://github.com/Fauve-mce/elia-gardmanager-frontend)
