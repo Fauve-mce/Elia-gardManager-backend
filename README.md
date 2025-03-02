@@ -78,7 +78,8 @@ MONGO_URI: The URL to your MongoDB database.
 SESSION_SECRET: A secret key for encrypting sessions (used by express-session).
 Note: Do not commit the .env file to a public repository. Ensure it's added to your .gitignore.
 
-▶️ Launching the Application
+## ▶️ How to Run the Project
+
 After configuring your .env file, you can start the server with:
 
 ```bash
@@ -109,6 +110,7 @@ Once the server is running, you can test the routes using an API client like Pos
 - GET /user: Get a list of all users
 - PUT /user/:id: Update a user (by ID)
 - DELETE /user/:id: Delete a user (by ID)
+- 
 **2. Schedules (/schedule)**
   
 - POST /schedule: Create a new schedule
@@ -116,11 +118,13 @@ Once the server is running, you can test the routes using an API client like Pos
 - PUT /schedule/:id: Update a schedule (by ID)
 - PUT /schedule: Validate a switch and update affected schedules (route validateSwitch)
 - DELETE /schedule/:id: Delete a schedule (by ID)
+- 
 **3. Statuses (/status)**
   
 - POST /status: Create a new status
 - GET /status: Get a list of all statuses
 - PUT /status/:id: Update a status (by ID)
+- 
 **4. Switches (/switch)**
   
 - POST /switch: Create a new switch
@@ -130,6 +134,7 @@ Once the server is running, you can test the routes using an API client like Pos
 - DELETE /switch/:id: Delete a switch (by ID)
   
 ## ✅ Tests and Verification
+
 **To test the routes:**
 
 - Install Postman (or another API client like Insomnia).
