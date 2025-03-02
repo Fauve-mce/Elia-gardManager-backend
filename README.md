@@ -56,6 +56,7 @@ Session Management: Uses express-session for storing sessions server-side.
 - npm or yarn (for dependency management)
 
 **Installation Steps**
+
 Clone the repository
 ```bash
 git clone https://github.com/<your-account>/Elia-gardManager.git
@@ -99,43 +100,49 @@ You should see the following output in the console:
 ## 🛠️ Usage and Endpoints
 Once the server is running, you can test the routes using an API client like Postman, Insomnia, or a simple HTTP client. Below are the available endpoints:
 
-1. Users (/user)
-POST /user: Create a new user
-POST /user/login: Log in a user
-GET /user/logout: Log out a user (removes session)
-GET /user/me: Get the currently logged-in user (via session)
-GET /user: Get a list of all users
-PUT /user/:id: Update a user (by ID)
-DELETE /user/:id: Delete a user (by ID)
-2. Schedules (/schedule)
-POST /schedule: Create a new schedule
-GET /schedule: Get all schedules
-PUT /schedule/:id: Update a schedule (by ID)
-PUT /schedule: Validate a switch and update affected schedules (route validateSwitch)
-DELETE /schedule/:id: Delete a schedule (by ID)
-3. Statuses (/status)
-POST /status: Create a new status
-GET /status: Get a list of all statuses
-PUT /status/:id: Update a status (by ID)
-4. Switches (/switch)
-POST /switch: Create a new switch
-GET /switch: Get a list of all switches
-GET /switch/:id: Get the “balance” of days for a user
-PUT /switch/:id: Update a switch state (by ID)
-DELETE /switch/:id: Delete a switch (by ID)
-✅ Tests and Verification
-To test the routes:
+**1. Users (/user)**
 
-Install Postman (or another API client like Insomnia).
-Check the URL of your server (e.g., http://localhost:8000).
-Test each endpoint using the appropriate methods (POST, GET, PUT, DELETE).
-Pass the required data in req.body or req.params as per the documentation above.
-Example for creating a user via Postman:
+- POST /user: Create a new user
+- POST /user/login: Log in a user
+- GET /user/logout: Log out a user (removes session)
+- GET /user/me: Get the currently logged-in user (via session)
+- GET /user: Get a list of all users
+- PUT /user/:id: Update a user (by ID)
+- DELETE /user/:id: Delete a user (by ID)
+**2. Schedules (/schedule)**
+  
+- POST /schedule: Create a new schedule
+- GET /schedule: Get all schedules
+- PUT /schedule/:id: Update a schedule (by ID)
+- PUT /schedule: Validate a switch and update affected schedules (route validateSwitch)
+- DELETE /schedule/:id: Delete a schedule (by ID)
+**3. Statuses (/status)**
+  
+- POST /status: Create a new status
+- GET /status: Get a list of all statuses
+- PUT /status/:id: Update a status (by ID)
+**4. Switches (/switch)**
+  
+- POST /switch: Create a new switch
+- GET /switch: Get a list of all switches
+- GET /switch/:id: Get the “balance” of days for a user
+- PUT /switch/:id: Update a switch state (by ID)
+- DELETE /switch/:id: Delete a switch (by ID)
+  
+## ✅ Tests and Verification
+**To test the routes:**
 
-Method: POST
+- Install Postman (or another API client like Insomnia).
+- Check the URL of your server (e.g., http://localhost:8000).
+- Test each endpoint using the appropriate methods (POST, GET, PUT, DELETE).
+- Pass the required data in req.body or req.params as per the documentation above.
+  
+**Example for creating a user via Postman:**
+
+- Method: POST
 URL: http://localhost:8000/user
-Headers:
-Content-Type: application/json
+- Headers:
+- Content-Type: application/json
 Body (raw, JSON):
 
 ```json
